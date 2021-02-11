@@ -1,0 +1,2 @@
+class Kadailist < ApplicationRecord
+end
