@@ -2,12 +2,12 @@ class UsersController < ApplicationController
   before_action :require_user_logged_in
   
   def index
-    @users = User.order(id: :desc)
+    @users = User.all
   end
 
   def show
      @user = User.find(params[:id])
-     @tasks = @user.tasks.order(id: :desc)
+     @tasks = @user.tasks.all
   end
 
   def new
